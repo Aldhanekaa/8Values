@@ -16,12 +16,7 @@ export const CTA = () => (
     width={useBreakpointValue({ base: '90vw', sm: '90vw', md: '70vw' })}
     py={3}
   >
-    <ChakraLink
-      isExternal
-      href='https://github.com/vercel/next.js/blob/canary/examples/with-chakra-ui-typescript'
-      flexGrow={3}
-      mx={2}
-    >
+    <ChakraLink flexGrow={3} mx={2} href='/instructions'>
       <Button width='100%' variant='solid' colorScheme='green'>
         Start Quiz
       </Button>
