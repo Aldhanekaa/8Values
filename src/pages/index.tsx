@@ -1,10 +1,5 @@
 import {
-  Link as ChakraLink,
   Text,
-  Code,
-  List,
-  ListIcon,
-  ListItem,
   useBreakpointValue,
   Image,
   Box,
@@ -12,14 +7,10 @@ import {
   Heading,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons';
 
 import { Hero } from '../components/Hero';
-import { Container as CustomContainer } from '../components/Container';
-import { Main } from '../components/Main';
 import { DarkModeSwitch } from '../components/DarkModeSwitch';
 import { CTA } from '../components/CTA';
-import { Footer } from '../components/Footer';
 
 const Index = () => (
   <Box mx={10} pt={100}>
