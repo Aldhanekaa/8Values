@@ -33,8 +33,6 @@ const Instructions = () => (
         </Link>
       </Flex>
     </Container>
-
-    <DarkModeSwitch />
   </Box>
 );
 

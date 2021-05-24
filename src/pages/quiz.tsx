@@ -8,9 +8,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-import Link from 'next/link';
 import { Hero } from '../components/Hero';
-import { DarkModeSwitch } from '../components/DarkModeSwitch';
 
 const QuizPage = () => (
   <Box mx={10} pt={100}>
@@ -67,8 +65,6 @@ const QuizPage = () => (
         </Button>
       </Flex>
     </Container>
-
-    <DarkModeSwitch />
   </Box>
 );
 

@@ -9,7 +9,6 @@ import {
 } from '@chakra-ui/react';
 
 import { Hero } from '../components/Hero';
-import { DarkModeSwitch } from '../components/DarkModeSwitch';
 import { CTA } from '../components/CTA';
 // @ts-ignore
 import Values from '../values.svg';
@@ -77,7 +76,6 @@ const Index = () => (
       </Text>
     </Container>
 
-    <DarkModeSwitch />
     <CTA />
   </Box>
 );
