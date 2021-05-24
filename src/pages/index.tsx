@@ -11,16 +11,14 @@ import {
 import { Hero } from '../components/Hero';
 import { DarkModeSwitch } from '../components/DarkModeSwitch';
 import { CTA } from '../components/CTA';
+// @ts-ignore
+import Values from '../values.svg';
 
 const Index = () => (
   <Box mx={10} pt={100}>
     <Hero />
     <Container mt={20} pb='100px'>
-      <Image
-        margin='auto'
-        src='https://8values.github.io/values.svg'
-        mb={5}
-      ></Image>
+      <Image margin='auto' src={Values} alt='hey' mb={5}></Image>
       <Heading
         as='h1'
         size={useBreakpointValue({ base: 'lg', sm: 'xl', md: 'xl' })}

@@ -1,7 +1,17 @@
-export default [
+interface questionI {
+  question: { id: string };
+  effect: {
+    econ: number;
+    dipl: number;
+    govt: number;
+    scty: number;
+  };
+}
+const questions: Array<questionI> = [
   {
-    question:
-      'Pentingnya pemerintah untuk campur tangan dalam perekonomian untuk melindungi konsumen.',
+    question: {
+      id: 'Pentingnya pemerintah untuk campur tangan dalam perekonomian untuk melindungi konsumen.',
+    },
     effect: {
       econ: 10,
       dipl: 0,
@@ -10,7 +20,9 @@ export default [
     },
   },
   {
-    question: 'Semakin bebas pasar, semakin bebas masyarakatnya.',
+    question: {
+      id: 'Semakin bebas pasar, semakin bebas masyarakatnya.',
+    },
     effect: {
       econ: -10,
       dipl: 0,
@@ -19,8 +31,9 @@ export default [
     },
   },
   {
-    question:
-      'Penindasan oleh perusahaan lebih menjadi perhatian daripada penindasan oleh pemerintah.',
+    question: {
+      id: 'Penindasan oleh perusahaan lebih menjadi perhatian daripada penindasan oleh pemerintah.',
+    },
     effect: {
       econ: 10,
       dipl: 0,
@@ -29,8 +42,9 @@ export default [
     },
   },
   {
-    question:
-      'Lebih baik memelihari keseimbangan bujet negara daripada menjamin kesejahteraan seluruh masyarakat.',
+    question: {
+      id: 'Lebih baik memelihari keseimbangan bujet negara daripada menjamin kesejahteraan seluruh masyarakat.',
+    },
     effect: {
       econ: -10,
       dipl: 0,
@@ -39,8 +53,9 @@ export default [
     },
   },
   {
-    question:
-      'Penelitian yang didanai pemerintah atau publik lebih menguntungkan masyarakat dibandingkan diserahkan ke pasar atau swasta.',
+    question: {
+      id: 'Penelitian yang didanai pemerintah atau publik lebih menguntungkan masyarakat dibandingkan diserahkan ke pasar atau swasta.',
+    },
     effect: {
       econ: 10,
       dipl: 0,
@@ -49,8 +64,9 @@ export default [
     },
   },
   {
-    question:
-      'Pengenaan bea cukai pada perdagangan internasional penting untuk mendorong produksi domestik. ',
+    question: {
+      id: 'Pengenaan bea cukai pada perdagangan internasional penting untuk mendorong produksi domestik. ',
+    },
     effect: {
       econ: 5,
       dipl: 0,
@@ -59,8 +75,9 @@ export default [
     },
   },
   {
-    question:
-      'Setiap orang berkontribusi sesuai kemampuannya dan setiap orang diberikan sesuai kebutuhannya masing-masing.',
+    question: {
+      id: 'Setiap orang berkontribusi sesuai kemampuannya dan setiap orang diberikan sesuai kebutuhannya masing-masing.',
+    },
     effect: {
       econ: 10,
       dipl: 0,
@@ -69,8 +86,9 @@ export default [
     },
   },
   {
-    question:
-      'Akan jadi langkah terbaik jika program sosial dihapuskan dan mendorong sumbangan dari individu atau swasta.',
+    question: {
+      id: 'Akan jadi langkah terbaik jika program sosial dihapuskan dan mendorong sumbangan dari individu atau swasta.',
+    },
     effect: {
       econ: -10,
       dipl: 0,
@@ -79,8 +97,9 @@ export default [
     },
   },
   {
-    question:
-      'Pajak seharusnya dinaikan pada orang-orang kaya untuk memenuhi kebutuhan orang-orang miskin.',
+    question: {
+      id: 'Pajak seharusnya dinaikan pada orang-orang kaya untuk memenuhi kebutuhan orang-orang miskin.',
+    },
     effect: {
       econ: 10,
       dipl: 0,
@@ -89,7 +108,7 @@ export default [
     },
   },
   {
-    question: 'Pewarisan adalah bentuk kekayaan yang sah.',
+    question: { id: 'Pewarisan adalah bentuk kekayaan yang sah.' },
     effect: {
       econ: -10,
       dipl: 0,
@@ -98,8 +117,9 @@ export default [
     },
   },
   {
-    question:
-      'Kebutuhan dasar seperti jalan raya dan listrik seharusnya dimiliki publik atau pemerintah.',
+    question: {
+      id: 'Kebutuhan dasar seperti jalan raya dan listrik seharusnya dimiliki publik atau pemerintah.',
+    },
     effect: {
       econ: 10,
       dipl: 0,
@@ -108,7 +128,7 @@ export default [
     },
   },
   {
-    question: 'Campur tangan pemerintah adalah ancaman pada ekonomi.',
+    question: { id: 'Campur tangan pemerintah adalah ancaman pada ekonomi.' },
     effect: {
       econ: -10,
       dipl: 0,
@@ -117,8 +137,9 @@ export default [
     },
   },
   {
-    question:
-      'Seseorang yang memiliki kemampuan untuk membayar seharusnya menerima layanan kesehatan yang lebih baik.',
+    question: {
+      id: 'Seseorang yang memiliki kemampuan untuk membayar seharusnya menerima layanan kesehatan yang lebih baik.',
+    },
     effect: {
       econ: -10,
       dipl: 0,
@@ -127,7 +148,7 @@ export default [
     },
   },
   {
-    question: 'Pendidikan yang berkualitas adalah hak semua orang.',
+    question: { id: 'Pendidikan yang berkualitas adalah hak semua orang.' },
     effect: {
       econ: 10,
       dipl: 0,
@@ -136,7 +157,9 @@ export default [
     },
   },
   {
-    question: 'Alat produksi harus menjadi milik pekerja yang menggunakannya.',
+    question: {
+      id: 'Alat produksi harus menjadi milik pekerja yang menggunakannya.',
+    },
     effect: {
       econ: 10,
       dipl: 0,
@@ -145,7 +168,7 @@ export default [
     },
   },
   {
-    question: 'Perserikatan Bangsa Bangsa harus dihapuskan.',
+    question: { id: 'Perserikatan Bangsa Bangsa harus dihapuskan.' },
     effect: {
       econ: 0,
       dipl: -10,
@@ -154,8 +177,9 @@ export default [
     },
   },
   {
-    question:
-      'Aksi militer yang dilakukan oleh negara penting untuk menjaga keutuhan negara.',
+    question: {
+      id: 'Aksi militer yang dilakukan oleh negara penting untuk menjaga keutuhan negara.',
+    },
     effect: {
       econ: 0,
       dipl: -10,
@@ -164,7 +188,9 @@ export default [
     },
   },
   {
-    question: 'Saya mendukung perserikatan regional, seperti Uni Eropa.',
+    question: {
+      id: 'Saya mendukung perserikatan regional, seperti Uni Eropa.',
+    },
     effect: {
       econ: -5,
       dipl: 10,
@@ -173,7 +199,7 @@ export default [
     },
   },
   {
-    question: 'Penting untuk memelihara kedaulatan negara.',
+    question: { id: 'Penting untuk memelihara kedaulatan negara.' },
     effect: {
       econ: 0,
       dipl: -10,
@@ -182,8 +208,9 @@ export default [
     },
   },
   {
-    question:
-      'Perserikatan pemerintah dunia akan menguntungkan bagi umat manusia.',
+    question: {
+      id: 'Perserikatan pemerintah dunia akan menguntungkan bagi umat manusia.',
+    },
     effect: {
       econ: 0,
       dipl: 10,
@@ -192,8 +219,9 @@ export default [
     },
   },
   {
-    question:
-      'Lebih penting untuk menjaga hubungan damai daripada meningkatkan kekuatan negara.',
+    question: {
+      id: 'Lebih penting untuk menjaga hubungan damai daripada meningkatkan kekuatan negara.',
+    },
     effect: {
       econ: 0,
       dipl: 10,
@@ -202,7 +230,7 @@ export default [
     },
   },
   {
-    question: 'Perang tidak perlu terjadi di negara lain.',
+    question: { id: 'Perang tidak perlu terjadi di negara lain.' },
     effect: {
       econ: 0,
       dipl: -10,
@@ -211,7 +239,7 @@ export default [
     },
   },
   {
-    question: 'Pengeluaran militer hanya membuang-buang uang.',
+    question: { id: 'Pengeluaran militer hanya membuang-buang uang.' },
     effect: {
       econ: 0,
       dipl: 10,
@@ -220,7 +248,7 @@ export default [
     },
   },
   {
-    question: 'Bantuan internasional hanya membuang-buang uang.',
+    question: { id: 'Bantuan internasional hanya membuang-buang uang.' },
     effect: {
       econ: -5,
       dipl: -10,
@@ -229,7 +257,7 @@ export default [
     },
   },
   {
-    question: 'Negaraku sangat hebat.',
+    question: { id: 'Negaraku sangat hebat.' },
     effect: {
       econ: 0,
       dipl: -10,
@@ -238,7 +266,9 @@ export default [
     },
   },
   {
-    question: 'Penelitian seharusnya dilakukan dalam skala internasional.',
+    question: {
+      id: 'Penelitian seharusnya dilakukan dalam skala internasional.',
+    },
     effect: {
       econ: 0,
       dipl: 10,
@@ -247,8 +277,9 @@ export default [
     },
   },
   {
-    question:
-      'Pemerintah seharusnya bertanggung jawab kepada komunitas internasional.',
+    question: {
+      id: 'Pemerintah seharusnya bertanggung jawab kepada komunitas internasional.',
+    },
     effect: {
       econ: 0,
       dipl: 10,
@@ -257,8 +288,9 @@ export default [
     },
   },
   {
-    question:
-      'Bahkan ketika protes pada pemerintah yang otoriter, kekerasan tidak dapat diterima.',
+    question: {
+      id: 'Bahkan ketika protes pada pemerintah yang otoriter, kekerasan tidak dapat diterima.',
+    },
     effect: {
       econ: 0,
       dipl: 5,
@@ -267,7 +299,9 @@ export default [
     },
   },
   {
-    question: 'Nilai-nilai agamaku seharusnya disebarkan sebanyak mungkin.',
+    question: {
+      id: 'Nilai-nilai agamaku seharusnya disebarkan sebanyak mungkin.',
+    },
     effect: {
       econ: 0,
       dipl: -5,
@@ -276,7 +310,9 @@ export default [
     },
   },
   {
-    question: 'Nilai-nilai bangsaku seharusnya disebarkan sebanyak mungkin.',
+    question: {
+      id: 'Nilai-nilai bangsaku seharusnya disebarkan sebanyak mungkin.',
+    },
     effect: {
       econ: 0,
       dipl: -10,
@@ -285,7 +321,7 @@ export default [
     },
   },
   {
-    question: 'Sangat penting untuk memelihara hukum dan ketertiban.',
+    question: { id: 'Sangat penting untuk memelihara hukum dan ketertiban.' },
     effect: {
       econ: 0,
       dipl: -5,
@@ -294,7 +330,7 @@ export default [
     },
   },
   {
-    question: 'Masyarakat umum membuat keputusan yang buruk.',
+    question: { id: 'Masyarakat umum membuat keputusan yang buruk.' },
     effect: {
       econ: 0,
       dipl: 0,
@@ -303,7 +339,7 @@ export default [
     },
   },
   {
-    question: 'Bunuh diri yang dibantu dokter seharusnya legal.',
+    question: { id: 'Bunuh diri yang dibantu dokter seharusnya legal.' },
     effect: {
       econ: 0,
       dipl: 0,
@@ -312,8 +348,9 @@ export default [
     },
   },
   {
-    question:
-      'Pengorbanan pada kebebasan sipil penting untuk menjaga kita dari serangan terorisme.',
+    question: {
+      id: 'Pengorbanan pada kebebasan sipil penting untuk menjaga kita dari serangan terorisme.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -322,7 +359,9 @@ export default [
     },
   },
   {
-    question: 'Pengawasan pemerintah diperlukan pada dunia yang modern.',
+    question: {
+      id: 'Pengawasan pemerintah diperlukan pada dunia yang modern.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -331,7 +370,9 @@ export default [
     },
   },
   {
-    question: 'Keberadaan negara merupakan ancaman pada kebebasan kita.',
+    question: {
+      id: 'Keberadaan negara merupakan ancaman pada kebebasan kita.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -340,8 +381,9 @@ export default [
     },
   },
   {
-    question:
-      'Apapun pandangan politikmu, penting untuk berpihak pada negaramu.',
+    question: {
+      id: 'Apapun pandangan politikmu, penting untuk berpihak pada negaramu.',
+    },
     effect: {
       econ: 0,
       dipl: -10,
@@ -350,7 +392,7 @@ export default [
     },
   },
   {
-    question: 'Semua otoritas harus dipertanyakan.',
+    question: { id: 'Semua otoritas harus dipertanyakan.' },
     effect: {
       econ: 0,
       dipl: 0,
@@ -359,7 +401,7 @@ export default [
     },
   },
   {
-    question: 'Negara yang hierarkis adalah yang terbaik.',
+    question: { id: 'Negara yang hierarkis adalah yang terbaik.' },
     effect: {
       econ: 0,
       dipl: 0,
@@ -368,8 +410,9 @@ export default [
     },
   },
   {
-    question:
-      'Penting bagi pemerintah untuk mengikuti pendapat masyarakat, meskipun itu salah.',
+    question: {
+      id: 'Penting bagi pemerintah untuk mengikuti pendapat masyarakat, meskipun itu salah.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -378,7 +421,7 @@ export default [
     },
   },
   {
-    question: 'Semakin kuat kepemimpinan, semakin bagus.',
+    question: { id: 'Semakin kuat kepemimpinan, semakin bagus.' },
     effect: {
       econ: 0,
       dipl: -10,
@@ -387,7 +430,9 @@ export default [
     },
   },
   {
-    question: 'Demokrasi itu lebih dari sekadar proses pengambilan keputusan.',
+    question: {
+      id: 'Demokrasi itu lebih dari sekadar proses pengambilan keputusan.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -396,7 +441,7 @@ export default [
     },
   },
   {
-    question: 'Peraturan mengenai lingkungan sangat penting.',
+    question: { id: 'Peraturan mengenai lingkungan sangat penting.' },
     effect: {
       econ: 5,
       dipl: 0,
@@ -405,8 +450,9 @@ export default [
     },
   },
   {
-    question:
-      'Dunia yang lebih baik akan datang dari otomasi, sains dan teknologi.',
+    question: {
+      id: 'Dunia yang lebih baik akan datang dari otomasi, sains dan teknologi.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -415,8 +461,9 @@ export default [
     },
   },
   {
-    question:
-      'Anak-anak seharusnya diberikan pendidikan tentang nilai agama atau tradisi.',
+    question: {
+      id: 'Anak-anak seharusnya diberikan pendidikan tentang nilai agama atau tradisi.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -425,7 +472,7 @@ export default [
     },
   },
   {
-    question: 'Tradisi tidak bernilai dari tradisi itu sendiri.',
+    question: { id: 'Tradisi tidak bernilai dari tradisi itu sendiri.' },
     effect: {
       econ: 0,
       dipl: 0,
@@ -434,7 +481,7 @@ export default [
     },
   },
   {
-    question: 'Agama harus berperan dalam pemerintahan.',
+    question: { id: 'Agama harus berperan dalam pemerintahan.' },
     effect: {
       econ: 0,
       dipl: 0,
@@ -443,8 +490,9 @@ export default [
     },
   },
   {
-    question:
-      'Rumah ibadah harus dikenakan pajak dengan cara yang sama seperti lembaga atau institusi lain.',
+    question: {
+      id: 'Rumah ibadah harus dikenakan pajak dengan cara yang sama seperti lembaga atau institusi lain.',
+    },
     effect: {
       econ: 5,
       dipl: 0,
@@ -453,8 +501,9 @@ export default [
     },
   },
   {
-    question:
-      'Perubahan iklim saat ini adalah ancaman terbesar pada kehidupan kita.',
+    question: {
+      id: 'Perubahan iklim saat ini adalah ancaman terbesar pada kehidupan kita.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -463,8 +512,9 @@ export default [
     },
   },
   {
-    question:
-      'Penting jika kita bekerja sama sebagai dunia yang bersatu untuk melawan perubahan iklim.',
+    question: {
+      id: 'Penting jika kita bekerja sama sebagai dunia yang bersatu untuk melawan perubahan iklim.',
+    },
     effect: {
       econ: 0,
       dipl: 10,
@@ -473,7 +523,9 @@ export default [
     },
   },
   {
-    question: 'Masyarakat di masa lalu lebih baik daripada masa sekarang.',
+    question: {
+      id: 'Masyarakat di masa lalu lebih baik daripada masa sekarang.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -482,7 +534,7 @@ export default [
     },
   },
   {
-    question: 'Penting untuk memelihara tradisi dari masa lalu.',
+    question: { id: 'Penting untuk memelihara tradisi dari masa lalu.' },
     effect: {
       econ: 0,
       dipl: 0,
@@ -491,8 +543,9 @@ export default [
     },
   },
   {
-    question:
-      'Penting bagi kita untuk berpikir jangka panjang, bahkan di luar rentang hidup kita.',
+    question: {
+      id: 'Penting bagi kita untuk berpikir jangka panjang, bahkan di luar rentang hidup kita.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -501,8 +554,9 @@ export default [
     },
   },
   {
-    question:
-      'Nalar atau akal lebih penting daripada mempertahankan budaya kita.',
+    question: {
+      id: 'Nalar atau akal lebih penting daripada mempertahankan budaya kita.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -511,7 +565,9 @@ export default [
     },
   },
   {
-    question: 'Penggunaan narkoba harus dilegalkan atau di dekriminalisasi.',
+    question: {
+      id: 'Penggunaan narkoba harus dilegalkan atau di dekriminalisasi.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -520,7 +576,7 @@ export default [
     },
   },
   {
-    question: 'Pernikahan sesama jenis seharusnya legal.',
+    question: { id: 'Pernikahan sesama jenis seharusnya legal.' },
     effect: {
       econ: 0,
       dipl: 0,
@@ -529,8 +585,9 @@ export default [
     },
   },
   {
-    question:
-      'Tidak ada kebudayaan yang lebih superior dibanding budaya lainnya.',
+    question: {
+      id: 'Tidak ada kebudayaan yang lebih superior dibanding budaya lainnya.',
+    },
     effect: {
       econ: 0,
       dipl: 10,
@@ -539,7 +596,7 @@ export default [
     },
   },
   {
-    question: 'Seks pra nikah adalah hal yang tidak bermoral.',
+    question: { id: 'Seks pra nikah adalah hal yang tidak bermoral.' },
     effect: {
       econ: 0,
       dipl: 0,
@@ -548,8 +605,9 @@ export default [
     },
   },
   {
-    question:
-      'Jika kita menerima imigran, penting bagi mereka untuk berasimilasi dengan budaya kita.',
+    question: {
+      id: 'Jika kita menerima imigran, penting bagi mereka untuk berasimilasi dengan budaya kita.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -558,7 +616,9 @@ export default [
     },
   },
   {
-    question: 'Aborsi seharusnya dilarang pada kasus dan kondisi apapun.',
+    question: {
+      id: 'Aborsi seharusnya dilarang pada kasus dan kondisi apapun.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -567,8 +627,9 @@ export default [
     },
   },
   {
-    question:
-      'Kepemilikan senjata api seharusnya dilarang bagi yang tidak memiliki alasan valid.',
+    question: {
+      id: 'Kepemilikan senjata api seharusnya dilarang bagi yang tidak memiliki alasan valid.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -577,8 +638,9 @@ export default [
     },
   },
   {
-    question:
-      'Saya mendukung sekali bayar dan layanan kesehatan yang universal.',
+    question: {
+      id: 'Saya mendukung sekali bayar dan layanan kesehatan yang universal.',
+    },
     effect: {
       econ: 10,
       dipl: 0,
@@ -587,7 +649,7 @@ export default [
     },
   },
   {
-    question: 'Prostitusi seharusnya ilegal.',
+    question: { id: 'Prostitusi seharusnya ilegal.' },
     effect: {
       econ: 0,
       dipl: 0,
@@ -596,7 +658,7 @@ export default [
     },
   },
   {
-    question: 'Memelihara nilai-nilai keluarga adalah hal penting.',
+    question: { id: 'Memelihara nilai-nilai keluarga adalah hal penting.' },
     effect: {
       econ: 0,
       dipl: 0,
@@ -605,8 +667,9 @@ export default [
     },
   },
   {
-    question:
-      'Mengejar kemajuan atau progres dengan cara apa pun itu berbahaya.',
+    question: {
+      id: 'Mengejar kemajuan atau progres dengan cara apa pun itu berbahaya.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -615,7 +678,9 @@ export default [
     },
   },
   {
-    question: 'Modifikasi genetik adalah hal yang baik, bahkan pada manusia.',
+    question: {
+      id: 'Modifikasi genetik adalah hal yang baik, bahkan pada manusia.',
+    },
     effect: {
       econ: 0,
       dipl: 0,
@@ -624,7 +689,7 @@ export default [
     },
   },
   {
-    question: 'Kita harus membuka perbatasan kita untuk imigran.',
+    question: { id: 'Kita harus membuka perbatasan kita untuk imigran.' },
     effect: {
       econ: 0,
       dipl: 10,
@@ -633,8 +698,9 @@ export default [
     },
   },
   {
-    question:
-      'Pemerintah harus memperhatikan orang asing seperti halnya warga negara mereka sendiri.',
+    question: {
+      id: 'Pemerintah harus memperhatikan orang asing seperti halnya warga negara mereka sendiri.',
+    },
     effect: {
       econ: 0,
       dipl: 10,
@@ -643,8 +709,9 @@ export default [
     },
   },
   {
-    question:
-      'Penting bagi kita untuk memajukan tujuan golongan kita di atas yang lainnya.',
+    question: {
+      id: 'Penting bagi kita untuk memajukan tujuan golongan kita di atas yang lainnya.',
+    },
     effect: {
       econ: -10,
       dipl: -10,
@@ -653,8 +720,9 @@ export default [
     },
   },
   {
-    question:
-      'Semua orang - terlepas dari faktor seperti budaya atau seksualitas - harus diperlakukan adil dan derajat yang sama.',
+    question: {
+      id: 'Semua orang - terlepas dari faktor seperti budaya atau seksualitas - harus diperlakukan adil dan derajat yang sama.',
+    },
     effect: {
       econ: 10,
       dipl: 10,
@@ -663,3 +731,5 @@ export default [
     },
   },
 ];
+
+export default questions;
