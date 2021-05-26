@@ -1,83 +1,113 @@
 import {
   Text,
+  chakra,
   useBreakpointValue,
   Image,
   Box,
   Container,
   Heading,
   useColorModeValue,
+  Link as ChakraLink,
+  Button,
 } from '@chakra-ui/react';
 
+import { useTranslation } from 'react-i18next';
 import { Hero } from '../components/Hero';
-import { CTA } from '../components/CTA';
+import { Container as CostumContainer } from '../components/Container';
+
 // @ts-ignore
 import Values from '../values.svg';
+import Link from 'next/link';
 
-const Index = () => (
-  <Box mx={10} pt={100}>
-    <Hero />
-    <Container mt={20} pb='100px'>
-      <Image margin='auto' src={Values} alt='hey' mb={5}></Image>
-      <Heading
-        as='h1'
-        size={useBreakpointValue({ base: 'lg', sm: 'xl', md: 'xl' })}
-      >
-        What is 8values?
-      </Heading>
-      <Text mt={5} color={useColorModeValue('gray.800', 'gray.300')}>
-        8values is, in essence, a political quiz that attempts to assign
-        percentages for eight different political values. You will be presented
-        by a statement, and then you will answer with your opinion on the
-        statement, from Strongly Agree to Strongly Disagree, with each answer
-        slightly affecting your scores. At the end of the quiz, your answers
-        will be compared to the maximum possible for each value, thus giving you
-        a percentage. Answer honestly!
-      </Text>
-      <Text mt={3} color={useColorModeValue('gray.800', 'gray.300')}>
-        There are 70 questions in the test.
-      </Text>
+const Index = () => {
+  const [t, i18n] = useTranslation('index');
 
-      <Heading
-        as='h1'
-        mt={10}
-        size={useBreakpointValue({ base: 'lg', sm: 'xl', md: 'xl' })}
-      >
-        What are the eight values?
-      </Heading>
-      <Text mt={5} color={useColorModeValue('gray.800', 'gray.300')}>
-        some texts should be place here
-      </Text>
+  return (
+    <Box mx={10} pt={100}>
+      <Hero />
+      <Container mt={20} pb='100px'>
+        <Image margin='auto' src={Values} alt='hey' mb={5}></Image>
+        <Heading
+          as='h1'
+          size={useBreakpointValue({ base: 'lg', sm: 'xl', md: 'xl' })}
+        >
+          {t('introduction.title')}
+        </Heading>
+        <Text mt={5} color={useColorModeValue('gray.800', 'gray.300')}>
+          {t('introduction.text')}
+        </Text>
+        <Text mt={3} color={useColorModeValue('gray.800', 'gray.300')}>
+          {t('introduction.questions', { questions: 70 })}
+        </Text>
 
-      <Heading
-        as='h1'
-        mt={10}
-        size={useBreakpointValue({ base: 'lg', sm: 'xl', md: 'xl' })}
-      >
-        What's the "Closest Match" mean at the bottom of the results?
-      </Heading>
-      <Text mt={5} color={useColorModeValue('gray.800', 'gray.300')}>
-        In addition to matching you to the eight values, the quiz also attempts
-        to match you to a political ideology. This is a work in progress and is
-        much less accurate than the values and axes, so don't take it too
-        seriously. If you disagree with your assigned ideology, send us an email
-        at eightvalues@gmail.com with your scores, matched ideology, and
-        preferred ideology, and we'll look into adjusting the system. Thanks!
-      </Text>
-      <Heading
-        as='h1'
-        mt={10}
-        size={useBreakpointValue({ base: 'lg', sm: 'xl', md: 'xl' })}
-      >
-        Note
-      </Heading>
-      <Text mt={5} color={useColorModeValue('gray.800', 'gray.300')}>
-        This website is created very much inspired by this website:
-        8values.github.io, please visit the website for the original version.
-      </Text>
-    </Container>
+        <Heading
+          as='h1'
+          mt={10}
+          size={useBreakpointValue({ base: 'lg', sm: 'xl', md: 'xl' })}
+        >
+          What are the eight values?
+        </Heading>
+        <Text mt={5} color={useColorModeValue('gray.800', 'gray.300')}>
+          some texts should be place here
+        </Text>
 
-    <CTA />
-  </Box>
-);
+        <Heading
+          as='h1'
+          mt={10}
+          size={useBreakpointValue({ base: 'lg', sm: 'xl', md: 'xl' })}
+        >
+          {t('closest-match-means.title')}
+        </Heading>
+        <Text mt={5} color={useColorModeValue('gray.800', 'gray.300')}>
+          {t('closest-match-means.text')}
+        </Text>
+        <Heading
+          as='h1'
+          mt={10}
+          size={useBreakpointValue({ base: 'lg', sm: 'xl', md: 'xl' })}
+        >
+          Note
+        </Heading>
+        <Text mt={5} color={useColorModeValue('gray.800', 'gray.300')}>
+          This website is created very much inspired by this website:
+          8values.github.io, please visit the website for the original version.
+        </Text>
+      </Container>
+
+      <CostumContainer
+        flexDirection='row'
+        position='fixed'
+        bottom='0'
+        left='0'
+        marginLeft={useBreakpointValue({
+          base: '-20px',
+          sm: '-10px',
+          md: '150px',
+        })}
+        width={useBreakpointValue({ base: '90vw', sm: '90vw', md: '70vw' })}
+        py={3}
+      >
+        <Link href='/instructions'>
+          <chakra.a flexGrow={3} mx={2}>
+            <Button width='100%' variant='solid' colorScheme='green'>
+              {t('startquiz')}
+            </Button>
+          </chakra.a>
+        </Link>
+
+        <ChakraLink
+          isExternal
+          href='https://github.com/aldhanekaa/8values'
+          flexGrow={1}
+          mx={2}
+        >
+          <Button width='100%' variant='outline' colorScheme='green'>
+            {t('viewrepo')}
+          </Button>
+        </ChakraLink>
+      </CostumContainer>
+    </Box>
+  );
+};
 
 export default Index;

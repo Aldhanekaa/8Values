@@ -5,8 +5,8 @@ export enum LangActions {
   deleteLang,
 }
 
-export type LanguagesT = 'bahasa' | 'en-uk';
-export const Languages = ['bahasa', 'en-uk'];
+export type LanguagesT = 'id' | 'en';
+export const Languages = ['id', 'en'];
 
 export interface SetLang {
   type: LangActions.setLang;

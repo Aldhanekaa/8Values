@@ -1,0 +1,19 @@
+{
+  "introduction": {
+    "title": "Apa itu 8nilai?",
+    "text": "8nilai adalah kuis politik yang menempatkan delapan nilai politik yang berbeda. Kamu akan disajikan sebuah pernyataan dan kemudian kamu akan menjawab tentang pendapatmu terhadap pernyataan tersebut, mulai dari Sangat Setuju sampai Sangat Tidak Setuju, dimana setiap jawaban akan mempengaruhi sedikit nilai skor mu. Di akhir kuis ini jawabanmu akan dibandingkan dengan kemungkinan terbanyak dari setiap nilai skor dalam bentuk persentase. Dimohon untuk menjawab dengan jujur!",
+    "questions": "Terdapat {{questions}} pertanyaan di dalam kuis politik ini."
+  },
+  "the-eight-values": {
+    "equality": {
+      "title": "Equality (Economic)",
+      "text": ""
+    }
+  },
+  "closest-match-means": {
+    "title": "Apa maksud dari \"Closest Match\" di bagian bawah dari hasil skor?",
+    "text": "Sebagai tambahan kecocokanmu dengan delapan nilai, kuis ini juga mencoba untuk menemukan kecocokanmu dengan ideologi politik. Untuk bagian ini masih dalam pengembangan dan belum terlalu akurat dibanding 8 nilai sebelumnya, jadi jangan terlalu dianggap serius ya. Terima kasih!"
+  },
+  "startquiz": "Mulai Quiz",
+  "viewrepo": "Lihat Repo"
+}

@@ -1,0 +1,13 @@
+{
+  "introduction": {
+    "title": "What is 8values?",
+    "text": "8values is, in essence, a political quiz that attempts to assign percentages for eight different political values. You will be presented by a statement, and then you will answer with your opinion on the statement, from Strongly Agree to Strongly Disagree, with each answer slightly affecting your scores. At the end of the quiz, your answers will be compared to the maximum possible for each value, thus giving you a percentage. Answer honestly!",
+    "questions": "There are {{questions}} questions in the test."
+  },
+  "closest-match-means": {
+    "title": "What's the \"Closest Match\" mean at the bottom of the results?",
+    "text": "In addition to matching you to the eight values, the quiz also attempts to match you to a political ideology. This is a work in progress and is much less accurate than the values and axes, so don't take it too seriously. If you disagree with your assigned ideology, send us an email at eightvalues@gmail.com with your scores, matched ideology, and preferred ideology, and we'll look into adjusting the system. Thanks!"
+  },
+  "startquiz": "Start Quiz",
+  "viewrepo": "View Repo"
+}

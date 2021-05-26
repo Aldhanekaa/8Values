@@ -16,15 +16,15 @@ export const DarkModeSwitch = () => {
 
   function languageOnChange(e: React.FormEvent<HTMLSelectElement>) {
     setCookie('lang', e.currentTarget.value);
-    console.log(
-      Languages.includes(e.currentTarget.value),
-      e.currentTarget.value,
-    );
+    // console.log(
+    //   Languages.includes(e.currentTarget.value),
+    //   e.currentTarget.value,
+    // );
     if (Languages.includes(e.currentTarget.value)) {
       // @ts-ignore
       dispatch(SetLang(e.currentTarget.value));
     } else {
-      dispatch(SetLang('en-uk'));
+      dispatch(SetLang('en'));
     }
   }
 
@@ -33,10 +33,10 @@ export const DarkModeSwitch = () => {
       setCookie('lang', cookies['lang']);
 
       // @ts-ignore
-      // dispatch(SetLang(cookies['lang']));
+      dispatch(SetLang(cookies['lang']));
     } else {
-      setCookie('lang', 'en-uk');
-      dispatch(SetLang('en-uk'));
+      setCookie('lang', 'en');
+      dispatch(SetLang('en'));
     }
   }, []);
 
@@ -48,8 +48,8 @@ export const DarkModeSwitch = () => {
           value={cookies['lang'] ? cookies['lang'] : 'EN-UK'}
           onChange={languageOnChange}
         >
-          <option value='bahasa'>Bahasa</option>
-          <option value='en-uk'>EN-UK</option>
+          <option value='id'>Bahasa</option>
+          <option value='en'>EN</option>
         </Select>
         <Button onClick={toggleColorMode}>{isDark ? 'Light' : 'Dark'}</Button>
       </Stack>

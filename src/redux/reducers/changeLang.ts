@@ -5,7 +5,7 @@ export interface LangState {
 }
 
 const defaultLang: LangState = {
-  lang: 'en-uk',
+  lang: 'en',
 };
 
 const LangReducer = (
