@@ -6,7 +6,10 @@ import EN_Locale from '../locales/en/index.json';
 
 // quiz locales
 import Bahasa_QUIZ_Locale from '../locales/bahasa/quiz.json';
+import Bahasa_questions_Locale from '../locales/bahasa/questions.json';
+
 import EN_Quiz_Locale from '../locales/en/quiz.json';
+import EN_questions_Locale from '../locales/en/questions.json';
 
 import { useCookie } from 'next-universal-cookie';
 
@@ -26,10 +29,12 @@ i18next.init({
     id: {
       index: Bahasa_Locale,
       quiz: Bahasa_QUIZ_Locale,
+      questions: Bahasa_questions_Locale,
     },
     en: {
       index: EN_Locale,
       quiz: EN_Quiz_Locale,
+      questions: EN_questions_Locale,
     },
   },
 });
@@ -46,7 +51,6 @@ export default function Layout({
     i18next.changeLanguage(LangState.lang);
     // console.log('hey');
   }, [LangState.lang]);
-
   return (
     <>
       <I18nextProvider i18n={i18next}>

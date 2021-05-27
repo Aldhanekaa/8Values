@@ -1,13 +1,13 @@
 {
   "instruction": "Kamu akan disajikan sejumlah pernyataan yang masing-masing nya dapat dipilih (setuju sampai tidak setuju) dengan mengklik tombol yang sesuai dengan pendapatmu.",
   "buttons": {
-    "strongly_agree": "Strongly Agree",
-    "agree": "Agree",
-    "neutral": "Neutral/Unsure",
-    "disagree": "Disagree",
-    "strongly_disagree": "Strongly Disagree",
-    "question_no": "Question {{current}} of {{total}}"
+    "strongly_agree": "Sangat Setuju",
+    "agree": "Setuju",
+    "neutral": "Netral/Tidak Yakin",
+    "disagree": "Tidak Setuju",
+    "strongly_disagree": "Sangat Tidak Setuju"
   },
+  "question_no": "Pertanyaan ke {{current}} dari {{total}}",
   "got_it": "Ayo Mulai!",
   "back": "Kembali"
 }

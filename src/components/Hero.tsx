@@ -13,5 +13,5 @@ export const Hero = ({ title }: { title: string }) => (
 );
 
 Hero.defaultProps = {
-  title: '8 Values – Reactjs Version',
+  title: '8Values',
 };

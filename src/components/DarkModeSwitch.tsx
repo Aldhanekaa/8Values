@@ -1,6 +1,14 @@
-import { useColorMode, Stack, Button, Select } from '@chakra-ui/react';
+import {
+  useColorMode,
+  Stack,
+  Button,
+  Select,
+  Flex,
+  Heading,
+} from '@chakra-ui/react';
 import { useCookie } from 'next-universal-cookie';
 import { useEffect, ChangeEvent } from 'react';
+import Link from 'next/link';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { RootStore } from '../redux/index';
@@ -42,6 +50,20 @@ export const DarkModeSwitch = () => {
 
   return (
     <>
+      <Stack position='fixed' top='1rem' left='1rem' direction='row'>
+        <Link href='/'>
+          <Flex
+            cursor='pointer'
+            justifyContent='center'
+            alignItems='center'
+            // height='100vh'
+            bgGradient='linear(to-l, #7928CA, #FF0080)'
+            bgClip='text'
+          >
+            <Heading fontSize='vw'>8 Values – Reactjs Version</Heading>
+          </Flex>
+        </Link>
+      </Stack>
       <Stack position='fixed' top='1rem' right='1rem' direction='row'>
         <Select
           variant='filled'

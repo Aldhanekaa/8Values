@@ -5,9 +5,9 @@
     "agree": "Agree",
     "neutral": "Neutral/Unsure",
     "disagree": "Disagree",
-    "strongly_disagree": "Strongly Disagree",
-    "question_no": "Question {{current}} of {{total}}"
+    "strongly_disagree": "Strongly Disagree"
   },
+  "question_no": "Question {{current}} of {{total}}",
   "got_it": "Got it!",
   "back": "Nope, I don't mind!"
 }

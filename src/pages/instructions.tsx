@@ -8,7 +8,6 @@ import {
 } from '@chakra-ui/react';
 
 import Link from 'next/link';
-import { Hero } from '../components/Hero';
 import { useTranslation } from 'react-i18next';
 
 const Instructions = () => {
@@ -16,7 +15,6 @@ const Instructions = () => {
 
   return (
     <Box mx={10} pt={100}>
-      <Hero />
       <Container mt={20} pb='100px'>
         <Heading
           as='h1'
