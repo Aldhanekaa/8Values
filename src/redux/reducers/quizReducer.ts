@@ -32,6 +32,17 @@ const LangReducer = (
   action: QuizDispatchTypes,
 ): QuizState => {
   switch (action.type) {
+    case QuizActions.initQuiz:
+      return {
+        qn: 0,
+        data: {
+          econ_array: new Array(Questions.length),
+          dipl_array: new Array(Questions.length),
+          govt_array: new Array(Questions.length),
+          scty_array: new Array(Questions.length),
+        },
+      };
+
     case QuizActions.nextQuiz:
       const copyOfState = { ...state };
 
@@ -44,12 +55,12 @@ const LangReducer = (
       copyOfState.data.scty_array[state.qn] =
         action.mult * Questions[state.qn].effect.scty;
       copyOfState.qn += 1;
-      console.log('yeep!', copyOfState.qn);
+      // console.log('yeep!', copyOfState.qn);
 
       if (copyOfState.qn < Questions.length) {
         return Object.assign({}, state, { ...copyOfState });
       }
-      console.log('yoooooo!', copyOfState.qn);
+      // console.log('yoooooo!', copyOfState.qn);
 
       return Object.assign({}, state, { ...copyOfState });
 
