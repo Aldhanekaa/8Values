@@ -27,7 +27,7 @@ const defaultQuizState: QuizState = {
   },
 };
 
-const LangReducer = (
+const QuizReducer = (
   state: QuizState = defaultQuizState,
   action: QuizDispatchTypes,
 ): QuizState => {
@@ -58,11 +58,11 @@ const LangReducer = (
       // console.log('yeep!', copyOfState.qn);
 
       if (copyOfState.qn < Questions.length) {
-        return Object.assign({}, state, { ...copyOfState });
+        return Object.assign({}, state, copyOfState);
       }
       // console.log('yoooooo!', copyOfState.qn);
 
-      return Object.assign({}, state, { ...copyOfState });
+      return Object.assign({}, state, copyOfState);
 
     case QuizActions.prevQuiz:
       if (state.qn == 0) {
@@ -74,4 +74,4 @@ const LangReducer = (
   }
 };
 
-export default LangReducer;
+export default QuizReducer;

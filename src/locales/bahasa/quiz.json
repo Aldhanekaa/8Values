@@ -5,7 +5,8 @@
     "agree": "Setuju",
     "neutral": "Netral/Tidak Yakin",
     "disagree": "Tidak Setuju",
-    "strongly_disagree": "Sangat Tidak Setuju"
+    "strongly_disagree": "Sangat Tidak Setuju",
+    "back": "Kembali"
   },
   "question_no": "Pertanyaan ke {{current}} dari {{total}}",
   "got_it": "Ayo Mulai!",
