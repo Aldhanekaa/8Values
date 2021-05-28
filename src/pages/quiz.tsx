@@ -1,5 +1,31 @@
 import Questions from '../questions';
 
+//#value-images
+// @ts-ignore
+import authority from '../value_images/authority.svg';
+
+// @ts-ignore
+import equality from '../value_images/equality.svg';
+
+// @ts-ignore
+import liberty from '../value_images/liberty.svg';
+
+// @ts-ignore
+import might from '../value_images/might.svg';
+
+// @ts-ignore
+import peace from '../value_images/peace.svg';
+
+// @ts-ignore
+import progress from '../value_images/progress.svg';
+
+// @ts-ignore
+import tradition from '../value_images/tradition.svg';
+
+// @ts-ignore
+import wealth from '../value_images/wealth.svg';
+//#endvalue-images
+
 import {
   useBreakpointValue,
   Box,
@@ -70,6 +96,76 @@ const QuizPage = (props: any): JSX.Element => {
         )}
 
         <Container mt={10} pb='100px'>
+          {/* <div>
+            <h2>
+              Economic Axis:{' '}
+              <span className='weight-300' id='economic-label'></span>
+            </h2>
+            <div className='axis'>
+              <img id='img-equality' src={equality} />
+              <div className='bar equality' id='bar-equality'>
+                <div className='text-wrapper' id='equality'></div>
+              </div>
+              <div className='bar wealth' id='bar-wealth'>
+                <div className='text-wrapper' id='wealth'></div>
+              </div>
+              <img id='img-wealth' src={wealth} />
+            </div>
+            <h2>
+              Diplomatic Axis:{' '}
+              <span className='weight-300' id='diplomatic-label'></span>
+            </h2>
+            <div className='axis'>
+              <img id='img-might' src={might} />
+              <div className='bar might' id='bar-might'>
+                <div className='text-wrapper' id='might'></div>
+              </div>
+              <div className='bar peace' id='bar-peace'>
+                <div className='text-wrapper' id='peace'></div>
+              </div>
+              <img id='img-peace' src={peace} />
+            </div>
+            <h2>
+              Civil Axis: <span className='weight-300' id='state-label'></span>
+            </h2>
+            <div className='axis'>
+              <img id='img-liberty' src={liberty} />
+              <div className='bar liberty' id='bar-liberty'>
+                <div className='text-wrapper' id='liberty'></div>
+              </div>
+              <div className='bar authority' id='bar-authority'>
+                <div className='text-wrapper' id='authority'></div>
+              </div>
+              <img id='img-authority' src={authority} />
+            </div>
+            <h2>
+              Societal Axis:{' '}
+              <span className='weight-300' id='society-label'></span>
+            </h2>
+            <div className='axis'>
+              <img id='img-tradition' src={tradition} height='128pt' />
+              <div
+                className='bar tradition'
+                style={{ width: '30%' }}
+                id='bar-tradition'
+              >
+                <div className='text-wrapper' id='tradition'>
+                  30%
+                </div>
+              </div>
+              <div
+                className='bar progress'
+                id='bar-progress'
+                style={{ width: '70%' }}
+              >
+                <div className='text-wrapper' id='progress'>
+                  70%
+                </div>
+              </div>
+              <img id='img-progress' src={progress} height='128pt' />
+            </div>
+          </div> */}
+
           <Heading
             as='h1'
             size={useBreakpointValue({ base: 'lg', sm: 'xl', md: 'xl' })}
