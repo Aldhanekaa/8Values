@@ -5,15 +5,46 @@
     "questions": "Terdapat {{questions}} pertanyaan di dalam kuis politik ini."
   },
   "the-eight-values": {
+    "title": "Apa saja ke delapan nilai tersebut?",
+    "desc": "Terdapat empat sumbu independen - Economic, Diplomatic, Civil, and Societal - dan masing-masing nya memiliki dua nilai yang berlawanan. Yaitu:",
     "equality": {
-      "title": "Equality (Economic)",
-      "text": ""
+      "title": "Equality",
+      "text": "Seseorang yang memiliki skor Equality lebih tinggi percaya bahwa ekonomi harus di distribusikan secara merata ke semua populasi. Mereka cenderung mendukung pengenaan pajak progresif, program sosial, dan pada nilai tertingginya yaitu, sosialisme."
+    },
+    "markets": {
+      "title": "Markets ",
+      "text": "Seseorang yang memiliki skor Markets lebih tinggi percaya bahwa ekonomi harus berfokus pada pertumbuhan yang pesat. Mereka cenderung mendukung pajak rendah, privatisasi, deregulasi, dan pada nilai tertingginya yaitu, laissez-faire kapitalisme."
+    },
+    "nation": {
+      "title": "Nation ",
+      "text": "Seseorang yang memiliki skor Nation lebih tinggi adalah seorang patriotik dan nasionalis. Mereka seringkali percaya bahwa kebijakan luar negeri yang agresif, militerisme, kekuatan, kedaulatan, dan pada nilai tertingginya yaitu, ekspansi teritorial."
+    },
+    "globe": {
+      "title": "Globe ",
+      "text": "Seseorang yang memiliki skor World lebih tinggi adalah seorang kosmopolitan dan globalis. Mereka seringkali percaya pada kebijakan luar negeri yang damai, menekankan diplomasi, kerja sama, dan pada nilai tertingginya yaitu, suatu pemerintahan dunia."
+    },
+    "liberty": {
+      "title": "Liberty ",
+      "text": "Seseorang yang memiliki skor Liberty lebih tinggi percaya pada kebebasan sipil yang kuat. Mereka cenderung mendukung demokrasi dan menolak campur tangan pemerintah pada kehidupan sehari-hari. catatan bahwa ini mengacu pada kebebasan sipil, bukan kebebasan ekonomi."
+    },
+    "authority": {
+      "title": "Authority ",
+      "text": "Seseorang yang memiliki skor Authority lebih tinggi percaya pada kekuatan pemerintah yang kuat. Mereka cenderung mendukung campur tangan pemerintah pada kehidupan sehari-hari, pengawasan pemerintah, dan pada nilai tertingginya yaitu, sensor atau otokrasi."
+    },
+    "tradition": {
+      "title": "Tradition ",
+      "text": "Seseorang yang memiliki skor Tradition lebih tinggi percaya bahwa nilai tradisi dan ketaatan pada moral. Meskipun tidak selalu, mereka biasanya relijius dan mendukung status quo."
+    },
+    "progress": {
+      "title": "Progress ",
+      "text": "Seseorang yang memiliki skor Progress lebih tinggi percaya pada perubahan sosial dan rationalitas. Meskipun tidak selalu, mereka biasanya sekular dan mendukung kepedulian lingkungan dan penelitian bidang sains atau teknologi."
     }
   },
   "closest-match-means": {
     "title": "Apa maksud dari \"Closest Match\" di bagian bawah dari hasil skor?",
     "text": "Sebagai tambahan kecocokanmu dengan delapan nilai, kuis ini juga mencoba untuk menemukan kecocokanmu dengan ideologi politik. Untuk bagian ini masih dalam pengembangan dan belum terlalu akurat dibanding 8 nilai sebelumnya, jadi jangan terlalu dianggap serius ya. Terima kasih!"
   },
+
   "startquiz": "Mulai Quiz",
   "viewrepo": "Lihat Repo"
 }

@@ -1,8 +1,8 @@
 import { Dispatch } from 'redux';
 
 export enum LangActions {
-  setLang,
-  deleteLang,
+  setLang = 'setLang',
+  deleteLang = 'deleteLang',
 }
 
 export type LanguagesT = 'id' | 'en';

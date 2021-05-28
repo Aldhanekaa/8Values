@@ -1,10 +1,11 @@
+import { type } from 'os';
 import { Dispatch } from 'redux';
 
 export enum QuizActions {
-  prevQuiz,
-  nextQuiz,
-  calc_score,
-  initQuiz,
+  prevQuiz = 'prevQuiz',
+  nextQuiz = 'nextQuiz',
+  calc_score = 'calc_score',
+  initQuiz = 'initQuiz',
 }
 
 export type LanguagesT = 'id' | 'en';
@@ -21,4 +22,8 @@ export interface NextQuiz {
   type: QuizActions.nextQuiz;
   mult: number;
 }
-export type QuizDispatchTypes = NextQuiz | PrevQuiz | InitQuiz;
+
+export interface CalcScore {
+  type: QuizActions.calc_score;
+}
+export type QuizDispatchTypes = NextQuiz | PrevQuiz | InitQuiz | CalcScore;

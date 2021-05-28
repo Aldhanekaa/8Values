@@ -5,6 +5,7 @@ import { NextCookieProvider } from 'next-universal-cookie';
 
 import theme from '../theme';
 import { AppProps } from 'next/app';
+import Head from 'next/head';
 import Layout from '../components/Layout';
 
 import { Provider } from 'react-redux';
@@ -12,15 +13,28 @@ import store from '../redux';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
-      <NextCookieProvider cookie={pageProps.cookie}>
-        <ChakraProvider resetCSS theme={theme}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </ChakraProvider>
-      </NextCookieProvider>
-    </Provider>
+    <>
+      <Head>
+        <link
+          href='https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700'
+          rel='stylesheet'
+        />
+
+        <meta name='theme-color' content='#f0efeb' />
+
+        <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+        <link rel='icon' type='image/png' href='/icon.png'></link>
+      </Head>
+      <Provider store={store}>
+        <NextCookieProvider cookie={pageProps.cookie}>
+          <ChakraProvider resetCSS theme={theme}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </ChakraProvider>
+        </NextCookieProvider>
+      </Provider>
+    </>
   );
 }
 

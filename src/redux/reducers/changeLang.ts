@@ -12,6 +12,8 @@ const LangReducer = (
   state: LangState = defaultLang,
   action: LangDispatchTypes,
 ): LangState => {
+  // console.log(state);
+
   switch (action.type) {
     case LangActions.setLang:
       return Object.assign({}, state, { lang: action.lang });

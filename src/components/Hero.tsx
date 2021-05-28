@@ -7,6 +7,7 @@ export const Hero = ({ title }: { title: string }) => (
     // height='100vh'
     bgGradient='linear(to-l, #7928CA, #FF0080)'
     bgClip='text'
+    color='gray.400'
   >
     <Heading fontSize='6vw'>{title}</Heading>
   </Flex>

@@ -24,10 +24,7 @@ export const DarkModeSwitch = () => {
 
   function languageOnChange(e: React.FormEvent<HTMLSelectElement>) {
     setCookie('lang', e.currentTarget.value);
-    // console.log(
-    //   Languages.includes(e.currentTarget.value),
-    //   e.currentTarget.value,
-    // );
+
     if (Languages.includes(e.currentTarget.value)) {
       // @ts-ignore
       dispatch(SetLang(e.currentTarget.value));
@@ -56,9 +53,8 @@ export const DarkModeSwitch = () => {
             cursor='pointer'
             justifyContent='center'
             alignItems='center'
-            // height='100vh'
-            bgGradient='linear(to-l, #7928CA, #FF0080)'
             bgClip='text'
+            color='gray.400'
           >
             <Heading fontSize='vw'>8 Values – Reactjs Version</Heading>
           </Flex>
