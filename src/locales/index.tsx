@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { RootStore } from '../redux/index';
 
-import  en as ENLocale from './en';
-import  id as BahasaLocale  from './bahasa';
+import  en from './en';
+import  id from './bahasa';
 
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
@@ -12,11 +12,11 @@ import i18next from 'i18next';
 i18next.init({
   interpolation: { escapeValue: false }, // React already does escaping
   lng: 'en',
-  fallbackLng: ['en', 'id'], // language to use
+  fallbackLng: ['en', 'id'], // languages to use
   lowerCaseLng: true,
   resources: {
-    id: BahasaLocale,
-    en: ENLocale,
+    id: id,
+    en: en,
   },
 });
 
