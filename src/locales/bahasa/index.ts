@@ -7,7 +7,7 @@ import Bahasa_questions_Locale from './questions.json';
 import Bahasa_axises_locale from './axis.json';
 import Bahasa_mathes_locale from './matches.json';
 
-export const id = {
+export default const id = {
   index: Bahasa_Locale,
   quiz: Bahasa_QUIZ_Locale,
   questions: Bahasa_questions_Locale,
