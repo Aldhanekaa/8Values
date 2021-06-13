@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { RootStore } from '../redux/index';
 
-import { en as ENLocale } from './en';
-import { id as BahasaLocale } from './bahasa';
+import  en as ENLocale from './en';
+import  id as BahasaLocale  from './bahasa';
 
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
