@@ -1,0 +1,38 @@
+{
+  "econ": [
+    "Komunis",
+    "Sosialis",
+    "Sosial",
+    "Sentris",
+    "Pasar",
+    "Kapitalis",
+    "Laissez-Faire"
+  ],
+  "dipl": [
+    "Kosmopolitan",
+    "Internasionalis",
+    "Tenang",
+    "Seimbang",
+    "Patriotik",
+    "Nasionalis",
+    "Chauvinis"
+  ],
+  "govt": [
+    "Anarkis",
+    "Libertarian",
+    "Liberal",
+    "Moderat",
+    "Statistik",
+    "Otoriter",
+    "Totaliter"
+  ],
+  "scty": [
+    "Revolusioner",
+    "Sangat Progresif",
+    "Progresif",
+    "Netral",
+    "Tradisional",
+    "Sangat Tradisional",
+    "Reaksioner"
+  ]
+}

@@ -37,55 +37,28 @@ import {
   InitQuiz,
 } from '../redux/actions/quiz';
 
-const econArray = [
-  'Communist',
-  'Socialist',
-  'Social',
-  'Centrist',
-  'Market',
-  'Capitalist',
-  'Laissez-Faire',
-];
-const diplArray = [
-  'Cosmopolitan',
-  'Internationalist',
-  'Peaceful',
-  'Balanced',
-  'Patriotic',
-  'Nationalist',
-  'Chauvinist',
-];
-const govtArray = [
-  'Anarchist',
-  'Libertarian',
-  'Liberal',
-  'Moderate',
-  'Statist',
-  'Authoritarian',
-  'Totalitarian',
-];
-const sctyArray = [
-  'Revolutionary',
-  'Very Progressive',
-  'Progressive',
-  'Neutral',
-  'Traditional',
-  'Very Traditional',
-  'Reactionary',
-];
 const ResultComponent = (props: any): JSX.Element => {
   const dispatch = useDispatch();
   const LangState = useSelector((state: RootStore) => state.lang);
   const QuizState = useSelector((state: RootStore) => state.quiz);
 
   const [t, i18n] = useTranslation('axis');
+  const [tMathes, i18nMatches] = useTranslation('matches');
 
   // console.log('After this text, return will be called', QuizState);
 
   useEffect(() => {
+    console.log(
+      // @ts-ignore
+      i18nMatches.getDataByLanguage(i18nMatches.language).matches,
+    );
+
     dispatch({
       type: QuizActions.calc_score,
     });
+
+    // @ts-ignore
+    const matches = i18nMatches.getDataByLanguage(i18nMatches.language).matches;
 
     const equality = QuizState.results.e;
     const peace = QuizState.results.d;
@@ -108,22 +81,22 @@ const ResultComponent = (props: any): JSX.Element => {
     // @ts-ignore
     document.getElementById('economic-label').innerHTML = setLabel(
       equality,
-      econArray,
+      matches.econ,
     );
     // @ts-ignore
     document.getElementById('diplomatic-label').innerHTML = setLabel(
       peace,
-      diplArray,
+      matches.dipl,
     );
     // @ts-ignore
     document.getElementById('state-label').innerHTML = setLabel(
       liberty,
-      govtArray,
+      matches.govt,
     );
     // @ts-ignore
     document.getElementById('society-label').innerHTML = setLabel(
       progress,
-      sctyArray,
+      matches.scty,
     );
 
     let ideology = '';
