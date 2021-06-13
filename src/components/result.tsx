@@ -1,4 +1,5 @@
-import Questions from '../questions';
+import { useEffect } from 'react';
+
 import ideologies from '../ideologies';
 
 import {
@@ -23,19 +24,11 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-import { Hero } from '../components/Hero';
 import { useTranslation } from 'react-i18next';
 
-import { useEffect, Fragment, ReactElement } from 'react';
-import { useRouter } from 'next/router';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootStore } from '../redux/index';
-import {
-  QuizActions,
-  NextQuiz,
-  PrevQuiz,
-  InitQuiz,
-} from '../redux/actions/quiz';
+import { QuizActions } from '../redux/actions/quiz';
 
 const ResultComponent = (props: any): JSX.Element => {
   const dispatch = useDispatch();
@@ -204,28 +197,32 @@ const ResultComponent = (props: any): JSX.Element => {
       ctx.fillText('Test Edition #1', 780, 90);
       ctx.textAlign = 'center';
       ctx.fillText(
-        'Economic Axis: ' +
+        t('economic_axis') +
+          ' ' +
           // @ts-ignore
           document.getElementById('economic-label').innerHTML,
         400,
         175,
       );
       ctx.fillText(
-        'Diplomatic Axis: ' +
+        t('diplomatic_axis') +
+          ' ' +
           // @ts-ignore
           document.getElementById('diplomatic-label').innerHTML,
         400,
         295,
       );
       ctx.fillText(
-        'Civil Axis: ' +
+        t('civic_axis') +
+          ' ' +
           // @ts-ignore
           document.getElementById('state-label').innerHTML,
         400,
         415,
       );
       ctx.fillText(
-        'Societal Axis: ' +
+        t('societal_axis') +
+          ' ' +
           // @ts-ignore
           document.getElementById('society-label').innerHTML,
         400,

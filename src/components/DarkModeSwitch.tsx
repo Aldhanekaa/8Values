@@ -122,7 +122,8 @@ export const DarkModeSwitch = () => {
           justify='center'
         >
           <Text>
-            8Values ReactJS Version, remade by{' '}
+            <ChakraLink href='https://8values.github.io'>8Values</ChakraLink>{' '}
+            ReactJS Version, remade by{' '}
             <ChakraLink href='https://github.com/aldhanekaa'>
               Aldhanekaa
             </ChakraLink>
