@@ -6,7 +6,7 @@ import EN_questions_Locale from './questions.json';
 import En_axises_locale from './axis.json';
 import En_mathes_locale from './matches.json';
 
-export const en = {
+export default const en = {
   index: EN_Locale,
   quiz: EN_Quiz_Locale,
   questions: EN_questions_Locale,
