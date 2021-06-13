@@ -37,8 +37,6 @@ import {
   InitQuiz,
 } from '../redux/actions/quiz';
 
-import GetQuestionBasedOnLanguage from '../questionsLocaleFunc';
-
 const econArray = [
   'Communist',
   'Socialist',
@@ -80,9 +78,9 @@ const ResultComponent = (props: any): JSX.Element => {
   const LangState = useSelector((state: RootStore) => state.lang);
   const QuizState = useSelector((state: RootStore) => state.quiz);
 
-  const [t, i18n] = useTranslation('result');
+  const [t, i18n] = useTranslation('axis');
 
-  console.log('After this text, return will be called', QuizState);
+  // console.log('After this text, return will be called', QuizState);
 
   useEffect(() => {
     dispatch({
@@ -271,7 +269,8 @@ const ResultComponent = (props: any): JSX.Element => {
   return (
     <div>
       <h2>
-        Economic Axis: <span className='weight-300' id='economic-label'></span>
+        {t('economic_axis')}{' '}
+        <span className='weight-300' id='economic-label'></span>
       </h2>
       <div className='axis'>
         <img id='img-equality' src={equality} />
@@ -284,7 +283,7 @@ const ResultComponent = (props: any): JSX.Element => {
         <img id='img-wealth' src={wealth} />
       </div>
       <h2>
-        Diplomatic Axis:{' '}
+        {t('diplomatic_axis')}{' '}
         <span className='weight-300' id='diplomatic-label'></span>
       </h2>
       <div className='axis'>
@@ -298,7 +297,7 @@ const ResultComponent = (props: any): JSX.Element => {
         <img id='img-peace' src={peace} />
       </div>
       <h2>
-        Civil Axis: <span className='weight-300' id='state-label'></span>
+        {t('civic_axis')} <span className='weight-300' id='state-label'></span>
       </h2>
       <div className='axis'>
         <img id='img-liberty' src={liberty} />
@@ -311,7 +310,8 @@ const ResultComponent = (props: any): JSX.Element => {
         <img id='img-authority' src={authority} />
       </div>
       <h2>
-        Societal Axis: <span className='weight-300' id='society-label'></span>
+        {t('societal_axis')}{' '}
+        <span className='weight-300' id='society-label'></span>
       </h2>
       <div className='axis'>
         <img id='img-tradition' src={tradition} height='128pt' />
@@ -324,7 +324,8 @@ const ResultComponent = (props: any): JSX.Element => {
         <img id='img-progress' src={progress} height='128pt' />
       </div>
       <Heading mt={10}>
-        Closest Match: <span className='weight-300' id='ideology-label'></span>
+        {t('closest_match')}{' '}
+        <span className='weight-300' id='ideology-label'></span>
       </Heading>
       <Text mt={2} mb={3}>
         Ideological matching is a work in progress, and is much less accurate

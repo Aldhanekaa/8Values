@@ -1,4 +1,6 @@
 {
+  "result_text": "Hasil Mu",
+
   "instruction": "Kamu akan disajikan sejumlah pernyataan yang masing-masing nya dapat dipilih (setuju sampai tidak setuju) dengan mengklik tombol yang sesuai dengan pendapatmu.",
   "buttons": {
     "strongly_agree": "Sangat Setuju",

@@ -63,8 +63,8 @@ const QuizPage = (props: any): JSX.Element => {
             />
           ) : (
             <>
-              <Hero title='Your Result' />
-              <NextSeo title='Your Result | 8Values' />
+              <Hero title={t('result_text')} />
+              <NextSeo title={`${t('result_text')} | 8Values`} />
             </>
           )}
 

@@ -1,4 +1,5 @@
 {
+  "result_text": "Your Result",
   "instruction": "You will be presented with a series of statements. For each one, click the button with your opinion on it.",
   "buttons": {
     "strongly_agree": "Strongly Agree",
