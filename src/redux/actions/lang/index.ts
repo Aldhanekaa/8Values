@@ -1,5 +1,4 @@
 import { Dispatch } from 'redux';
-import i18next from 'i18next';
 
 export enum LangActions {
   setLang = 'setLang',

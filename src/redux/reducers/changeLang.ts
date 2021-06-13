@@ -1,7 +1,7 @@
-import { LangActions, LangDispatchTypes, LanguagesT } from '../actions/lang';
+import { LangActions, LangDispatchTypes } from '../actions/lang';
 
 export interface LangState {
-  lang: LanguagesT;
+  lang: string;
 }
 
 const defaultLang: LangState = {
