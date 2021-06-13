@@ -47,7 +47,6 @@ const QuizPage = (props: any): JSX.Element => {
       type: QuizActions.initQuiz,
     });
   }, []);
-  console.log('After this text, return will be called', QuizState);
 
   return (
     <>

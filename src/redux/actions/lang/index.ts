@@ -6,8 +6,13 @@ export enum LangActions {
 }
 
 export type LanguagesT = 'id' | 'en';
-export const Languages = ['id', 'en'];
-
+export const Languages = [
+  {
+    value: 'id',
+    label: 'bahasa',
+  },
+  { value: 'en', label: 'EN' },
+];
 export interface SetLang {
   type: LangActions.setLang;
   lang: string;

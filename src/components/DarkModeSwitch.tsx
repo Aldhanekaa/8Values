@@ -25,7 +25,7 @@ export const DarkModeSwitch = () => {
   function languageOnChange(e: React.FormEvent<HTMLSelectElement>) {
     setCookie('lang', e.currentTarget.value);
 
-    if (Languages.includes(e.currentTarget.value)) {
+    if (Languages.find((lang) => lang.value == e.currentTarget.value)) {
       // @ts-ignore
       dispatch(SetLang(e.currentTarget.value));
     } else {
@@ -56,7 +56,7 @@ export const DarkModeSwitch = () => {
             bgClip='text'
             color='gray.400'
           >
-            <Heading fontSize='vw'>8 Values – Reactjs Version</Heading>
+            <Heading fontSize='vw'>8Values – Reactjs Version</Heading>
           </Flex>
         </Link>
       </Stack>
@@ -66,8 +66,9 @@ export const DarkModeSwitch = () => {
           value={cookies['lang'] ? cookies['lang'] : 'EN-UK'}
           onChange={languageOnChange}
         >
-          <option value='id'>Bahasa</option>
-          <option value='en'>EN</option>
+          {Languages.map((lang) => (
+            <option value={lang.value}>{lang.label}</option>
+          ))}
         </Select>
         <Button onClick={toggleColorMode}>{isDark ? 'Light' : 'Dark'}</Button>
       </Stack>

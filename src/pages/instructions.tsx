@@ -5,9 +5,9 @@ import {
   Heading,
   Flex,
   Button,
+  Link,
 } from '@chakra-ui/react';
 
-import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { NextSeo } from 'next-seo';
 
