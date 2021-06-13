@@ -1,21 +1,18 @@
-import { LanguagesT } from './redux/actions/lang';
+import { LanguagesT, Languages } from './redux/actions/lang';
 import { useEffect } from 'react';
+import i18next from 'i18next';
 
 import Bahasa_questions_Locale from './locales/bahasa/questions.json';
 import EN_questions_Locale from './locales/en/questions.json';
 
-export default function GetQuestionBasedOnLanguage(lang: LanguagesT) {
-  switch (lang) {
-    case 'en':
-      return EN_questions_Locale;
+export default function GetQuestionBasedOnLanguage() {
+  // @ts-ignore
+  const langQuestions = i18next.getDataByLanguage(i18next.language).questions;
 
-      break;
-    case 'id':
-      return Bahasa_questions_Locale;
-      break;
-    default:
-      return EN_questions_Locale;
-
-      break;
+  //i18next.getDataByLanguage('id')
+  if (!langQuestions) {
+    return EN_questions_Locale;
   }
+
+  return langQuestions;
 }

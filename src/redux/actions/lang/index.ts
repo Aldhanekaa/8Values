@@ -1,18 +1,11 @@
 import { Dispatch } from 'redux';
+import i18next from 'i18next';
 
 export enum LangActions {
   setLang = 'setLang',
   deleteLang = 'deleteLang',
 }
 
-export type LanguagesT = 'id' | 'en';
-export const Languages = [
-  {
-    value: 'id',
-    label: 'bahasa',
-  },
-  { value: 'en', label: 'EN' },
-];
 export interface SetLang {
   type: LangActions.setLang;
   lang: string;
@@ -20,7 +13,7 @@ export interface SetLang {
 export type LangDispatchTypes = SetLang;
 
 export const SetLang =
-  (Lang: LanguagesT) => (dispatch: Dispatch<LangDispatchTypes>) => {
+  (Lang: string) => (dispatch: Dispatch<LangDispatchTypes>) => {
     dispatch({
       type: LangActions.setLang,
       lang: Lang,

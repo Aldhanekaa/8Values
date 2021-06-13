@@ -9,10 +9,11 @@ import {
 import { useCookie } from 'next-universal-cookie';
 import { useEffect, ChangeEvent } from 'react';
 import Link from 'next/link';
+import i18next from 'i18next';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { RootStore } from '../redux/index';
-import { SetLang, Languages } from '../redux/actions/lang/index';
+import { SetLang } from '../redux/actions/lang/index';
 
 export const DarkModeSwitch = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ export const DarkModeSwitch = () => {
   function languageOnChange(e: React.FormEvent<HTMLSelectElement>) {
     setCookie('lang', e.currentTarget.value);
 
-    if (Languages.find((lang) => lang.value == e.currentTarget.value)) {
+    if (i18next.languages.find((lang) => lang == e.currentTarget.value)) {
       // @ts-ignore
       dispatch(SetLang(e.currentTarget.value));
     } else {
@@ -34,7 +35,7 @@ export const DarkModeSwitch = () => {
   }
 
   useEffect(() => {
-    if (Languages.includes(cookies['lang'])) {
+    if (i18next.languages.includes(cookies['lang'])) {
       setCookie('lang', cookies['lang']);
 
       // @ts-ignore
@@ -66,8 +67,8 @@ export const DarkModeSwitch = () => {
           value={cookies['lang'] ? cookies['lang'] : 'EN-UK'}
           onChange={languageOnChange}
         >
-          {Languages.map((lang) => (
-            <option value={lang.value}>{lang.label}</option>
+          {i18next.languages.map((lang) => (
+            <option value={lang}>{lang}</option>
           ))}
         </Select>
         <Button onClick={toggleColorMode}>{isDark ? 'Light' : 'Dark'}</Button>

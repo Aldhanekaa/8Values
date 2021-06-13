@@ -54,7 +54,7 @@ const QuizPage = (props: any): JSX.Element => {
 
       <Box mx={10} pt={100}>
         <Fragment>
-          {GetQuestionBasedOnLanguage(LangState.lang)[QuizState.qn] ? (
+          {GetQuestionBasedOnLanguage()[QuizState.qn] ? (
             <Hero
               title={t('question_no', {
                 current: QuizState.qn + 1,
@@ -73,12 +73,11 @@ const QuizPage = (props: any): JSX.Element => {
               as='h1'
               size={useBreakpointValue({ base: 'lg', sm: 'xl', md: 'xl' })}
             >
-              {GetQuestionBasedOnLanguage(LangState.lang)[QuizState.qn] &&
-                GetQuestionBasedOnLanguage(LangState.lang)[QuizState.qn]
-                  .question}
+              {GetQuestionBasedOnLanguage()[QuizState.qn] &&
+                GetQuestionBasedOnLanguage()[QuizState.qn].question}
             </Heading>
 
-            {GetQuestionBasedOnLanguage(LangState.lang)[QuizState.qn] ? (
+            {GetQuestionBasedOnLanguage()[QuizState.qn] ? (
               <Flex flexDirection='column' alignItems='center' mt={5}>
                 <Button
                   width='100%'

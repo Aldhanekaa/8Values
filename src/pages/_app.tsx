@@ -10,6 +10,7 @@ import Layout from '../components/Layout';
 
 import { Provider } from 'react-redux';
 import store from '../redux';
+import InternalisationWrapper from '../locales/index';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -29,7 +30,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <NextCookieProvider cookie={pageProps.cookie}>
           <ChakraProvider resetCSS theme={theme}>
             <Layout>
-              <Component {...pageProps} />
+              <InternalisationWrapper>
+                <Component {...pageProps} />
+              </InternalisationWrapper>
             </Layout>
           </ChakraProvider>
         </NextCookieProvider>
